@@ -16,10 +16,6 @@ function Footer() {
             <h4 className="footer-heading">معلومات الاتصال</h4>
             <div className="footer-contact">
               <div className="contact-item">
-                <span className="contact-icon">📧</span>
-                <span>info@example.com</span>
-              </div>
-              <div className="contact-item">
                 <span className="contact-icon">📱</span>
                 <span>966504622623+</span>
               </div>
