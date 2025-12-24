@@ -1,5 +1,6 @@
 .how-it-works {
-  background-color: var(--bg-secondary);
+  background: radial-gradient(circle at top right, rgba(34, 193, 195, 0.18), transparent 55%),
+    var(--bg-primary);
   position: relative;
 }
 
@@ -14,10 +15,10 @@
   position: relative;
   background: var(--bg-card);
   border: 1px solid var(--border-color);
-  border-radius: 20px;
-  padding: 2.5rem 2rem;
+  border-radius: 16px;
+  padding: 1.75rem 1.5rem;
   transition: all 0.3s ease;
-  min-height: 280px;
+  min-height: 220px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -44,8 +45,54 @@
   line-height: 1;
 }
 
+.step-icon-wrapper {
+  width: 80px;
+  height: 80px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.step-icon-wrapper::before {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  border-radius: 20px;
+  padding: 2px;
+  background: linear-gradient(135deg, rgba(168, 85, 247, 0.5), rgba(139, 92, 246, 0.3));
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.step-card:hover .step-icon-wrapper::before {
+  opacity: 1;
+}
+
+.step-card:hover .step-icon-wrapper {
+  transform: scale(1.1) rotate(5deg);
+  box-shadow: 0 12px 40px rgba(168, 85, 247, 0.5) !important;
+}
+
 .step-icon {
   font-size: 2.5rem;
+  color: white;
+  position: relative;
+  z-index: 1;
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.3));
+  transition: all 0.4s ease;
+}
+
+.step-card:hover .step-icon {
+  transform: scale(1.1);
+  filter: drop-shadow(0 4px 12px rgba(168, 85, 247, 0.6));
 }
 
 .step-title {
@@ -75,6 +122,11 @@
 
   .step-number {
     font-size: 2.5rem;
+  }
+
+  .step-icon-wrapper {
+    width: 70px;
+    height: 70px;
   }
 
   .step-icon {

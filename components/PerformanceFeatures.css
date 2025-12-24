@@ -1,5 +1,6 @@
 .performance-features {
-  background-color: var(--bg-primary);
+  background: radial-gradient(circle at center, rgba(15, 23, 42, 0.9), transparent 70%),
+    var(--bg-primary);
   position: relative;
 }
 
@@ -11,59 +12,124 @@
 }
 
 .feature-card {
-  background: var(--bg-card);
-  border: 1px solid var(--border-color);
+  background: rgba(15, 23, 42, 0.6);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(139, 92, 246, 0.2);
   padding: 2.5rem 2rem;
-  border-radius: 20px;
-  box-shadow: var(--shadow-md);
-  transition: all 0.3s ease;
+  border-radius: 24px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   text-align: center;
   min-height: 280px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+}
+
+.feature-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, rgba(168, 85, 247, 0.5), transparent);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.feature-card:hover::before {
+  opacity: 1;
 }
 
 .feature-card:hover {
-  transform: translateY(-6px);
-  box-shadow: var(--shadow-purple);
-  border-color: var(--primary-color);
-  background: rgba(168, 85, 247, 0.05);
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 20px 60px rgba(168, 85, 247, 0.3);
+  border-color: rgba(168, 85, 247, 0.5);
+  background: rgba(15, 23, 42, 0.8);
 }
 
 .feature-icon-wrapper {
-  width: 70px;
-  height: 70px;
-  border-radius: 18px;
+  width: 90px;
+  height: 90px;
+  border-radius: 24px;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 auto 1.5rem;
-  transition: all 0.3s ease;
-  border: 1px solid var(--border-color);
-  background: rgba(168, 85, 247, 0.1);
+  margin: 0 auto 2rem;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.feature-icon-wrapper::before {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  border-radius: 24px;
+  padding: 2px;
+  background: linear-gradient(135deg, rgba(168, 85, 247, 0.5), rgba(139, 92, 246, 0.3));
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.feature-card:hover .feature-icon-wrapper::before {
+  opacity: 1;
 }
 
 .feature-card:hover .feature-icon-wrapper {
-  transform: scale(1.05);
+  transform: scale(1.1) rotate(5deg);
+  box-shadow: 0 12px 40px rgba(168, 85, 247, 0.5);
 }
 
 .feature-icon {
-  font-size: 2.25rem;
+  font-size: 2.75rem;
+  color: white;
+  position: relative;
+  z-index: 1;
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.3));
+  transition: all 0.4s ease;
+}
+
+.feature-card:hover .feature-icon {
+  transform: scale(1.1);
+  filter: drop-shadow(0 4px 12px rgba(168, 85, 247, 0.6));
 }
 
 .feature-title {
-  font-size: 1.25rem;
+  font-size: 1.35rem;
   font-weight: 700;
-  color: var(--primary-light);
+  background: linear-gradient(135deg, #c084fc 0%, #a78bfa 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
   margin-bottom: 1rem;
+  transition: all 0.3s ease;
+}
+
+.feature-card:hover .feature-title {
+  background: linear-gradient(135deg, #e9d5ff 0%, #c084fc 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .feature-description {
   color: var(--text-secondary);
-  line-height: 1.8;
-  font-size: 0.95rem;
+  line-height: 1.9;
+  font-size: 1rem;
   margin: 0;
+  transition: color 0.3s ease;
+}
+
+.feature-card:hover .feature-description {
+  color: rgba(209, 213, 219, 0.95);
 }
 
 @media (max-width: 768px) {
@@ -78,20 +144,20 @@
   }
 
   .feature-icon-wrapper {
-    width: 60px;
-    height: 60px;
-    margin-bottom: 1.25rem;
+    width: 80px;
+    height: 80px;
+    margin-bottom: 1.5rem;
   }
 
   .feature-icon {
-    font-size: 2rem;
+    font-size: 2.5rem;
   }
 
   .feature-title {
-    font-size: 1.15rem;
+    font-size: 1.2rem;
   }
 
   .feature-description {
-    font-size: 0.9rem;
+    font-size: 0.95rem;
   }
 }

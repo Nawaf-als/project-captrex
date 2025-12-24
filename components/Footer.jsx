@@ -16,12 +16,16 @@ function Footer() {
             <h4 className="footer-heading">معلومات الاتصال</h4>
             <div className="footer-contact">
               <div className="contact-item">
-                <span className="contact-icon">📱</span>
-                <span>966504622623+</span>
+                <div className="contact-icon-wrapper">
+                  <i className="ri-phone-line contact-icon"></i>
+                </div>
+                <span className="contact-text">966504622623+</span>
               </div>
               <div className="contact-item">
-                <span className="contact-icon">📍</span>
-                <span>الرياض، المملكة العربية السعودية</span>
+                <div className="contact-icon-wrapper">
+                  <i className="ri-map-pin-line contact-icon"></i>
+                </div>
+                <span className="contact-text">الرياض، المملكة العربية السعودية</span>
               </div>
             </div>
           </div>
