@@ -1,5 +1,5 @@
 .hero {
-  background: linear-gradient(135deg, #0a0e27 0%, #1a1f3a 50%, #0f172a 100%);
+  background-color: var(--bg-accent);
   position: relative;
   padding: 140px 0;
   overflow: hidden;
@@ -42,8 +42,8 @@
   font-weight: 800;
   margin-bottom: 2rem;
   line-height: 1.2;
-  color: var(--text-primary);
-  text-shadow: 0 4px 20px rgba(168, 85, 247, 0.3);
+  color: var(--primary-dark);
+  text-shadow: none;
 }
 
 .hero-description {

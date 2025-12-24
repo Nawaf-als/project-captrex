@@ -1,7 +1,7 @@
 .footer {
-  background: linear-gradient(135deg, var(--bg-secondary) 0%, #0a0e27 100%);
-  color: var(--text-primary);
-  padding: 5rem 0 2.5rem;
+  background-color: #ffffff;
+  color: var(--text-secondary);
+  padding: 3.5rem 0 2rem;
   border-top: 1px solid var(--border-color);
   position: relative;
 }
@@ -18,15 +18,16 @@
 }
 
 .footer-title {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   font-weight: 700;
-  margin-bottom: 1rem;
+  margin-bottom: 0.75rem;
+  color: var(--text-primary);
 }
 
 .footer-description {
-  color: #9ca3af;
-  line-height: 1.8;
-  font-size: 1rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  font-size: 0.95rem;
 }
 
 .footer-heading {
