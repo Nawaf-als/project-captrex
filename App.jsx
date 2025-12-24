@@ -11,8 +11,8 @@ function App() {
   return (
     <div className="App">
       <Hero />
-      <WhyPerformance />
       <HowItWorks />
+      <WhyPerformance />
       <PerformanceFeatures />
       <Results />
       <FAQ />

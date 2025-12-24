@@ -11,7 +11,12 @@ function WhyPerformance() {
         
         <div className="why-cards">
           <div className="why-card">
-            <div className="why-icon">⏱️</div>
+            <div className="why-icon-wrapper" style={{ 
+              background: 'linear-gradient(135deg, #a855f7 0%, #c084fc 100%)',
+              boxShadow: '0 8px 32px rgba(168, 85, 247, 0.4)'
+            }}>
+              <i className="why-icon ri-time-line" />
+            </div>
             <h3>توفير الوقت</h3>
             <p>
               نظام سريع يعني تقارير أسرع، قرارات أسرع، ونمو أعمال أسرع. 
@@ -20,7 +25,12 @@ function WhyPerformance() {
           </div>
 
           <div className="why-card">
-            <div className="why-icon">💼</div>
+            <div className="why-icon-wrapper" style={{ 
+              background: 'linear-gradient(135deg, #8b5cf6 0%, #a78bfa 100%)',
+              boxShadow: '0 8px 32px rgba(139, 92, 246, 0.4)'
+            }}>
+              <i className="why-icon ri-briefcase-line" />
+            </div>
             <h3>زيادة الثقة</h3>
             <p>
               عندما يعمل نظامك بسلاسة ودقة، تزداد ثقتك في اتخاذ القرارات المهمة 
@@ -29,7 +39,12 @@ function WhyPerformance() {
           </div>
 
           <div className="why-card">
-            <div className="why-icon">📊</div>
+            <div className="why-icon-wrapper" style={{ 
+              background: 'linear-gradient(135deg, #7c3aed 0%, #9333ea 100%)',
+              boxShadow: '0 8px 32px rgba(124, 58, 237, 0.4)'
+            }}>
+              <i className="why-icon ri-bar-chart-2-line" />
+            </div>
             <h3>دقة الحسابات</h3>
             <p>
               الأخطاء المالية تكلفك مالاً وسمعة. نظامنا يضمن حساب كل شيء بدقة 
@@ -38,7 +53,12 @@ function WhyPerformance() {
           </div>
 
           <div className="why-card">
-            <div className="why-icon">🚀</div>
+            <div className="why-icon-wrapper" style={{ 
+              background: 'linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%)',
+              boxShadow: '0 8px 32px rgba(99, 102, 241, 0.4)'
+            }}>
+              <i className="why-icon ri-rocket-line" />
+            </div>
             <h3>القدرة على النمو</h3>
             <p>
               نظام قوي يستطيع التعامل مع نمو أعمالك. سواء كانت 100 أو 100,000 معاملة، 

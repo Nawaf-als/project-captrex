@@ -14,21 +14,27 @@ function Results() {
       suffix: ' ثانية',
       label: 'متوسط زمن المعالجة',
       description: 'للطلب الواحد',
-      icon: '⏱️'
+      icon: 'ri-time-line',
+      gradient: 'linear-gradient(135deg, #a855f7 0%, #c084fc 100%)',
+      glowColor: 'rgba(168, 85, 247, 0.4)'
     },
     {
       value: counters.ordersProcessed,
       suffix: ' ألف',
       label: 'عدد الطلبات المعالجة',
       description: 'شهرياً',
-      icon: '📦'
+      icon: 'ri-stack-line',
+      gradient: 'linear-gradient(135deg, #8b5cf6 0%, #a78bfa 100%)',
+      glowColor: 'rgba(139, 92, 246, 0.4)'
     },
     {
       value: counters.accuracy,
       suffix: '%',
       label: 'نسبة الدقة',
       description: 'في الحسابات',
-      icon: '✅'
+      icon: 'ri-checkbox-circle-line',
+      gradient: 'linear-gradient(135deg, #7c3aed 0%, #9333ea 100%)',
+      glowColor: 'rgba(124, 58, 237, 0.4)'
     }
   ];
 
@@ -68,7 +74,12 @@ function Results() {
         <div className="stats-grid">
           {stats.map((stat, index) => (
             <div key={index} className="stat-card">
-              <div className="stat-icon">{stat.icon}</div>
+              <div className="stat-icon-wrapper" style={{ 
+                background: stat.gradient,
+                boxShadow: `0 8px 32px ${stat.glowColor}`
+              }}>
+                <i className={`stat-icon ${stat.icon}`} />
+              </div>
               <div className="stat-value">
                 {stat.value}
                 <span className="stat-suffix">{stat.suffix}</span>
