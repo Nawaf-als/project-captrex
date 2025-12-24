@@ -10,23 +10,11 @@ function Footer() {
             <p className="footer-description">
               نحن هنا للإجابة على أسئلتك ومساعدتك في البدء
             </p>
-          </div>
-
-          <div className="footer-section">
-            <h4 className="footer-heading">معلومات الاتصال</h4>
-            <div className="footer-contact">
-              <div className="contact-item">
-                <div className="contact-icon-wrapper">
-                  <i className="ri-phone-line contact-icon"></i>
-                </div>
-                <span className="contact-text">966504622623+</span>
+            <div className="footer-phone">
+              <div className="phone-icon-wrapper">
+                <i className="ri-phone-line phone-icon"></i>
               </div>
-              <div className="contact-item">
-                <div className="contact-icon-wrapper">
-                  <i className="ri-map-pin-line contact-icon"></i>
-                </div>
-                <span className="contact-text">الرياض، المملكة العربية السعودية</span>
-              </div>
+              <span className="phone-number">966504622623+</span>
             </div>
           </div>
 
@@ -42,7 +30,7 @@ function Footer() {
         </div>
 
         <div className="footer-bottom">
-          <p>&copy; 2024 جميع الحقوق محفوظة. نظام الأداء المالي</p>
+          <p>&copy; 2024 جميع الحقوق محفوظة نظام الأداء المالي</p>
         </div>
       </div>
     </footer>
